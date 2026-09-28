@@ -2,9 +2,6 @@
 Program that creates the course object and serilalizes it 
 Checks if course is full and allows for student to remove themself from the course 
 
-
-
-
 @author Brianna Graham
 */
 
@@ -60,25 +57,17 @@ public class Courses implements Serializable{
 
     }
 
-
-
     //Gets the course name
-
-    /*
-    @return String name of the course
-    */
+    //@return String name of the course
 
     public String getCourseName(){
         return courseName;
 
     }
 
-    //Gets the course ID
-
-    
+    //Gets the course ID   
     //@return String ID of the course
     
-
     public String getCourseId(){
         return courseId;
 
@@ -93,10 +82,7 @@ public class Courses implements Serializable{
     }
 
     //Gets the current amount of students in the course
-
-    
-    // @return int, amount of students currently registered
-    
+    // @return int, amount of students currently registered    
 
     public int getCurrentStudents(){
         return currentStudents;
@@ -104,60 +90,36 @@ public class Courses implements Serializable{
     }
 
     //Gets the ArrayList of students registered in the course
-
-    
     //@return ArrayList, students that are registered in the course
-    
 
     public ArrayList<Students> getRegisteredStudents(){
         return registeredStudents;
 
     }
 
-
-
     //Gets the course instructor
-
-    /*
-    @return String, instructor of the course
-    */
-
+    //@return String, instructor of the course
+    
     public String getCourseInstructor(){
         return courseInstructor;
 
     }
-
-
-
     //Gets the course section number
-
-    /*
-    @return int, section number of the course
-    */
-
+    //@return int, section number of the course
     public int getCourseSectionNumber(){
         return courseSectionNumber;
 
     }
 
-
-
     //Gets the course location
-
-    /*
-    @return String, location of the course
-    */
-
+    //@return String, location of the course
     public String getCourseLocation(){
         return courseLocation;
 
     }
 
-
-
-    //Sets a new maximum amount of students
-
     /*
+    Sets a new maximum amount of students
     @param maximumStudents, new maximum amount of students
     */
 
@@ -181,9 +143,8 @@ public class Courses implements Serializable{
 
     }
 
-    //Sets a new course location
-
     /*
+    Sets a new course location
     @param courseLocation, new location for the course
     */
 

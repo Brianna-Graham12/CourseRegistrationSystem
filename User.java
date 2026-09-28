@@ -7,7 +7,10 @@ User stores login information for student and admin and tells what type of user 
 
 */
 
-public class User{
+import java.io.Serializable; 
+import java.util.ArrayList;
+
+public abstract class User implements Serializable{
 
     private String username;         
     private String password; 
@@ -67,7 +70,7 @@ public class User{
 
     */
 
-    public String getfirstName(String firstName){
+    public String getfirstName(){
         return firstName;
     }
 
@@ -98,7 +101,6 @@ public class User{
 
     /*
     @return boolean, checks if the password is correct true/false 
-    
     Takes in users entered password and verifiees with password in file 
      */  
 
@@ -113,4 +115,17 @@ public class User{
     public void setPassword(String password){
         this.password = password; 
     }
+
+    // Display all courses 
+    public void displayAllCourses(ArrayList<Courses> courses){
+        for(Courses course : courses){
+            course.displayCourse();
+        }
+    }
+
+    // Abstract methods that both users will use diffently 
+    public abstract void displayMenu();
+
+    public abstract userType getUserType();
+
 }
