@@ -8,7 +8,7 @@ Inherits from user and implements from admin interface.
 import java.io.*;
 import java.util.*;
 
-public class Admin extends User, implements AdminInterface{
+public class Admin extends User implements AdminInterface{
 
     // Only one admin username and password 
 
@@ -33,7 +33,7 @@ public class Admin extends User, implements AdminInterface{
 
     @Override 
     public userType getUserType(){
-        returns userType.ADMIN;
+        return userType.ADMIN;
     }
 
     // DIsplays admin menu 
@@ -92,7 +92,7 @@ public class Admin extends User, implements AdminInterface{
     public void editCourse(ArrayList<Courses> courses, String courseId, int courseSectionNumber){
 
         for(Courses course : courses){
-            if(course.getCourseId().equalsIgnoreCase(courseId) && course.getCourseSectionNumber() == sectionNumber){
+            if(course.getCourseId().equalsIgnoreCase(courseId) && course.getCourseSectionNumber() == courseSectionNumber){
 
                 System.out.println("What would you like to edit?");
                 System.out.println("Maximum Students");
@@ -233,6 +233,7 @@ public class Admin extends User, implements AdminInterface{
             System.out.println("Error writing to file");
 
         }
+    }
 
     // View Students in a course 
     @Override
@@ -306,7 +307,5 @@ public class Admin extends User, implements AdminInterface{
         }
         displayAllCourses(courses);
     }
-
 }
 
-}
