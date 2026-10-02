@@ -84,7 +84,7 @@ public class Courses implements Serializable{
     //Gets the current amount of students in the course
     // @return int, amount of students currently registered    
 
-    public int getCurrentStudents(){
+    public int getCurrentStudentss(){
         return currentStudents;
 
     }

@@ -218,7 +218,7 @@ public class Admin extends User implements AdminInterface{
                     writer.write("Course Name: " + course.getCourseName() + "\n");
                     writer.write("Course ID: " + course.getCourseId() + "\n");
                     writer.write("Section: " + course.getCourseSectionNumber() + "\n");
-                    writer.write("Students: " + course.getCurrentStudent() + "/" + course.getMaximumStudents() + "\n");
+                    writer.write("Students: " + course.getCurrentStudents() + "/" + course.getMaximumStudents() + "\n");
                     writer.write("-----------------------------------\n");
 
                 }
@@ -295,7 +295,7 @@ public class Admin extends User implements AdminInterface{
         for(int i = 0; i < courses.size() - 1; i++){
             int smallest = i;
             for(int j = i + 1; j < courses.size(); j++){
-                if(courses.get(j).getCurrentStudents()< courses.get(smallest).getCurrentStudents()){
+                if(courses.get(j).getCurrentStudentss()< courses.get(smallest).getCurrentStudentss()){
                     smallest = j;
 
                 }
