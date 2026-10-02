@@ -261,7 +261,7 @@ public class Admin extends User implements AdminInterface{
     // Displays every course a student is registered in 
 
     @Override
-    public void viewStudentsCourses(ArrayList<Courses> courses, String firstName, String lastName){
+    public void viewStudentCourses(ArrayList<Courses> courses, String firstName, String lastName){
 
         boolean found = false;
         for(Courses course : courses){
@@ -295,7 +295,7 @@ public class Admin extends User implements AdminInterface{
         for(int i = 0; i < courses.size() - 1; i++){
             int smallest = i;
             for(int j = i + 1; j < courses.size(); j++){
-                if(courses.get(j).getCurrentStudentss()< courses.get(smallest).getCurrentStudentss()){
+                if(courses.get(j).getCurrentStudents()< courses.get(smallest).getCurrentStudents()){
                     smallest = j;
 
                 }
