@@ -51,7 +51,7 @@ public class Admin extends User implements AdminInterface{
         System.out.println("5. Register Student");
         System.out.println("6. Reports");
         System.out.println("7. Logout");
-        System.out.println("-----------------------------------");System.out.println();
+        System.out.println("-----------------------------------");
     }
 
     // Creates a new course 
