@@ -33,7 +33,7 @@ public Interface AdminInterface{
     public void viewStudentsInCourse(ArrayList<Courses> courses, String courseId, int courseSectionNumber);
 
     //Be able to view a specific students courses
-    public void viewStudentCourses(ArrayList<Courses> courses, String firstName, String lastName);
+    public void viewStudentsCourses(ArrayList<Courses> courses, String firstName, String lastName);
 
     // Sort Courses by their available seats 
     public void sortCourses(ArrayList<Courses> courses);

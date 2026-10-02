@@ -92,7 +92,7 @@ public class Courses implements Serializable{
     //Gets the ArrayList of students registered in the course
     //@return ArrayList, students that are registered in the course
 
-    public ArrayList<Student> getRegisteredStudents(){
+    public ArrayList<Student> getRegisteredStudentss(){
         return registeredStudents;
 
     }

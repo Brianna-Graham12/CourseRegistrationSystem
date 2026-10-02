@@ -242,7 +242,7 @@ public class Admin extends User implements AdminInterface{
         for(Courses course : courses){
             if(course.getCourseId().equalsIgnoreCase(courseId) && course.getCourseSectionNumber() == courseSectionNumber){
 
-                ArrayList<Student> students = course.getRegisteredStudent();
+                ArrayList<Student> students = course.getRegisteredStudents();
                 if(students == null){
                     System.out.println("No students are registered");
                     return;
@@ -261,12 +261,12 @@ public class Admin extends User implements AdminInterface{
     // Displays every course a student is registered in 
 
     @Override
-    public void viewStudentCourses(ArrayList<Courses> courses, String firstName, String lastName){
+    public void viewStudentsCourses(ArrayList<Courses> courses, String firstName, String lastName){
 
         boolean found = false;
         for(Courses course : courses){
 
-            ArrayList<Student> students = course.getRegisteredStudent();
+            ArrayList<Student> students = course.getRegisteredStudents();
             if(students != null){
                 for(Student student : students){
 
