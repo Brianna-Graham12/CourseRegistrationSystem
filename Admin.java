@@ -172,9 +172,9 @@ public class Admin extends User implements AdminInterface{
     // Registers new student at the university
 
     @Override
-    public void registerStudent(ArrayList<Student> students, Students student){
+    public void registerStudent(ArrayList<Student> students, Student student){
 
-        for(Students currentStudent : students){
+        for(Student currentStudent : students){
 
             if(currentStudent.getUsername().equalsIgnoreCase(student.getUsername())){
                 System.out.println("Student already exists");
@@ -218,7 +218,7 @@ public class Admin extends User implements AdminInterface{
                     writer.write("Course Name: " + course.getCourseName() + "\n");
                     writer.write("Course ID: " + course.getCourseId() + "\n");
                     writer.write("Section: " + course.getCourseSectionNumber() + "\n");
-                    writer.write("Students: " + course.getCurrentStudents() + "/" + course.getMaximumStudents() + "\n");
+                    writer.write("Students: " + course.getCurrentStudent() + "/" + course.getMaximumStudents() + "\n");
                     writer.write("-----------------------------------\n");
 
                 }
@@ -242,13 +242,13 @@ public class Admin extends User implements AdminInterface{
         for(Courses course : courses){
             if(course.getCourseId().equalsIgnoreCase(courseId) && course.getCourseSectionNumber() == courseSectionNumber){
 
-                ArrayList<Student> students = course.getRegisteredStudents();
+                ArrayList<Student> students = course.getRegisteredStudent();
                 if(students == null){
                     System.out.println("No students are registered");
                     return;
 
                 }
-                for(Students student : students){
+                for(Student student : students){
                     System.out.println(student.getFirstName() + " " + student.getLastName());
 
                 }
@@ -266,9 +266,9 @@ public class Admin extends User implements AdminInterface{
         boolean found = false;
         for(Courses course : courses){
 
-            ArrayList<Student> students = course.getRegisteredStudents();
+            ArrayList<Student> students = course.getRegisteredStudent();
             if(students != null){
-                for(Students student : students){
+                for(Student student : students){
 
                     if(student.getFirstName().equalsIgnoreCase(firstName) && student.getLastName().equalsIgnoreCase(lastName)){
 

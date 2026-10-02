@@ -29,7 +29,7 @@ public class Student extends User implements StudentInteface{
             username = ("" + firstName.charAt(0) + lastName.charAt(0) + numbers).toLowerCase();
             exists = false;
 
-            for(Students student : students){
+            for(Student student : students){
 
                 if(student.getUsername().equalsIgnoreCase(username)){
                     exists = true;
