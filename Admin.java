@@ -172,7 +172,7 @@ public class Admin extends User implements AdminInterface{
     // Registers new student at the university
 
     @Override
-    public void registerStudent(ArrayList<Students> students, Students student){
+    public void registerStudent(ArrayList<Student> students, Students student){
 
         for(Students currentStudent : students){
 
@@ -242,7 +242,7 @@ public class Admin extends User implements AdminInterface{
         for(Courses course : courses){
             if(course.getCourseId().equalsIgnoreCase(courseId) && course.getCourseSectionNumber() == courseSectionNumber){
 
-                ArrayList<Students> students = course.getRegisteredStudents();
+                ArrayList<Student> students = course.getRegisteredStudents();
                 if(students == null){
                     System.out.println("No students are registered");
                     return;
@@ -266,7 +266,7 @@ public class Admin extends User implements AdminInterface{
         boolean found = false;
         for(Courses course : courses){
 
-            ArrayList<Students> students = course.getRegisteredStudents();
+            ArrayList<Student> students = course.getRegisteredStudents();
             if(students != null){
                 for(Students student : students){
 

@@ -85,7 +85,7 @@ public class Serialization{
 
 
     //Saves the student ArrayList
-    public static void saveStudents(ArrayList<Students> students){
+    public static void saveStudents(ArrayList<Student> students){
         try{
 
             FileOutputStream fos = new FileOutputStream("Students.ser");
@@ -103,14 +103,14 @@ public class Serialization{
     }
 
     //Loads the student ArrayList
-    public static ArrayList<Students> loadStudents(){
+    public static ArrayList<Student> loadStudents(){
 
-        ArrayList<Students> students = null;
+        ArrayList<Student> students = null;
         try{
 
             FileInputStream fis = new FileInputStream("Students.ser");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            students = (ArrayList<Students>)ois.readObject();
+            students = (ArrayList<Student>)ois.readObject();
             ois.close();
             fis.close();
 

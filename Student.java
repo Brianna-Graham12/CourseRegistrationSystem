@@ -10,13 +10,13 @@ import java.util.*;
 public class Student extends User implements StudentInteface{
 
     // Constructor 
-    public Students(String password, String firstName, String lastName, ArrayList<Students> students){
+    public Student(String password, String firstName, String lastName, ArrayList<Student> students){
         super(generateUsername(firstName, lastName, students), password, firstName, lastName);
 
     }
 
     //Generates username using first initial, last initial and 3 random numbers
-    private static String generateUsername(String firstName, String lastName, ArrayList<Students> students){
+    private static String generateUsername(String firstName, String lastName, ArrayList<Student> students){
 
         Random random = new Random();
         String username;

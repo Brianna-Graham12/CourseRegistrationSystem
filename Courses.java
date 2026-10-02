@@ -20,7 +20,7 @@ public class Courses implements Serializable{
     private int currentStudents;
 
     //ArrayList that stores the students registered in the course
-    private ArrayList<Students> registeredStudents;
+    private ArrayList<Student> registeredStudents;
 
     private String courseInstructor;
     private int courseSectionNumber;
@@ -92,7 +92,7 @@ public class Courses implements Serializable{
     //Gets the ArrayList of students registered in the course
     //@return ArrayList, students that are registered in the course
 
-    public ArrayList<Students> getRegisteredStudents(){
+    public ArrayList<Student> getRegisteredStudents(){
         return registeredStudents;
 
     }
@@ -204,7 +204,7 @@ public class Courses implements Serializable{
 
         //If this is the first student create the ArrayList
         if(registeredStudents == null){
-            registeredStudents = new ArrayList<Students>();
+            registeredStudents = new ArrayList<Student>();
 
         }
 

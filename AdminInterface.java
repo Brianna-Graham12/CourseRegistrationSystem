@@ -21,7 +21,7 @@ public Interface AdminInterface{
     public void viewCourse(ArrayList<Courses> courses, String courseId);
 
     //Registers a student 
-    public void registerStudent(ArrayList<Students> students, Students student);
+    public void registerStudent(ArrayList<Student> students, Students student);
 
     //View the full courses 
     public void viewFullCourses(ArrayList<Courses> courses);
