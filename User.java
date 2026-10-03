@@ -70,7 +70,7 @@ public abstract class User implements Serializable{
 
     */
 
-    public String getfirstName(){
+    public String getFirstName(){
         return firstName;
     }
 
@@ -78,7 +78,7 @@ public abstract class User implements Serializable{
     @return lastName 
     */
 
-    public String getlastName(){
+    public String getLastName(){
         return lastName;
     }
 
